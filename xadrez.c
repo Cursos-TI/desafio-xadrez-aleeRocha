@@ -5,10 +5,6 @@
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
 int main() {
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
-
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
     // Exemplo: Crie uma função recursiva para o movimento do Bispo.
@@ -20,6 +16,8 @@ int main() {
     int casasTorre = 5, torre;
     int casasBispo = 5, bispo = 1;
     int casasRainha = 8, rainha = 1;
+    int movimentoCavaloBaixo = 2, movimentoCavaloEsquerda = 1;
+    int i = 0, j = 0;
 
 
     printf("**** Desafio movimentação de peças de xadrez ****\n");
@@ -53,6 +51,25 @@ int main() {
         printf("Esquerda.\n");
         ++rainha;
     } while (rainha <= casasRainha);
+
+
+    printf("\nMovimentação da peça cavalo, duas casas para baixo e uma para a esquerda.\n");
+
+    for (i = 0; i < movimentoCavaloBaixo; i++)
+    {
+
+        printf("Baixo.\n");
+
+        if (i == movimentoCavaloBaixo - 1)
+        {
+            while (j < movimentoCavaloEsquerda)
+            {
+                printf("Esquerda.\n");
+                j++;
+            }
+        }
+        
+    }
     
 
     return 0;
